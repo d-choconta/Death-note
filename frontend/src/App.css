@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(21, 21, 21);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+    z-index: 100;
+    border-bottom: 2px solid  rgb(21, 21, 21);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 30px;
+    background:  rgb(21, 21, 21);
+}
+
+.navItem {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+    border-radius: 8px;
+    background-color:  rgb(21, 21, 21);
+}
+
+.navItem:hover {
+    color: #ffffff;
+}
+
+.navItem::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navItem:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}

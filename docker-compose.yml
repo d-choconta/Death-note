@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_deathnote
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: deathnote
+    ports:
+      - "15432:5432"
+
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    container_name: go_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+      DB_NAME: deathnote
+      DB_HOST: db
+      DB_PORT: 5432
+
+volumes:
+  dbdata:

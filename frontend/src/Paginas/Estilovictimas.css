@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.list h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 150px 0 30px 0;
+    color: #fff;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 500px;
+}
+
+.victim-card {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+
+.victim-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.victim-card img {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #333;
+}
+
+.victim-info {
+    flex: 1;
+}
+
+.victim-card h3 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.victim-card p {
+    font-family: 'Poppins', sans-serif;
+    margin: 4px 0;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+.estado {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+
+.estado.muerto {
+    color: #ff6b6b;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.estado.vivo {
+    color: #6bff6b;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    .list {
+        margin-top: 580px; 
+    }
+    .victim-card {
+        width: calc(50% - 15px);
+    }
+    
+    .victim-card img {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list{
+        margin-top: 2650px;
+    }
+    
+    .victim-card {
+        width: 100%;
+        max-width: 400px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .victim-card img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .list{
+        margin-top: 2500px;
+    }
+
+    .list {
+        padding: 10px;
+    }
+    
+    .victim-card {
+        padding: 15px;
+    }
+}
